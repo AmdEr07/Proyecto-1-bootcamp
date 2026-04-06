@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - ChocoDelicia</title>
 
   <!-- CSS externo -->
@@ -25,7 +26,7 @@
   </header>
 
   <!-- MAIN -->
-  <main class="contacto">
+  <main>
 
     <section>
       <h2>Contáctanos</h2>
@@ -38,19 +39,15 @@
       <!-- FORMULARIO -->
       <form action="resultado.html" method="get">
 
-        <!-- NOMBRE -->
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre">
 
-        <!-- EMAIL -->
         <label for="correo">Correo:</label>
         <input type="email" id="correo" name="correo">
 
-        <!-- TELÉFONO -->
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono">
 
-        <!-- SELECT -->
         <label for="motivo">Motivo del contacto:</label>
         <select id="motivo" name="motivo">
           <option>Información de productos</option>
@@ -58,32 +55,32 @@
           <option>Reclamación</option>
         </select>
 
-        <!-- RADIO -->
         <p>¿Eres cliente?</p>
 
-        <input type="radio" id="si" name="cliente" value="si">
-        <label for="si">Sí</label>
+        <div class="opciones">
+          <input type="radio" id="si" name="cliente" value="si">
+          <label for="si">Sí</label>
 
-        <input type="radio" id="no" name="cliente" value="no">
-        <label for="no">No</label>
+          <input type="radio" id="no" name="cliente" value="no">
+          <label for="no">No</label>
+        </div>
 
-        <!-- CHECKBOX -->
         <p>¿Qué te interesa?</p>
 
-        <input type="checkbox" id="negro" name="negro">
-        <label for="negro">Chocolate negro</label>
+        <div class="opciones">
+          <input type="checkbox" id="negro" name="negro">
+          <label for="negro">Chocolate negro</label>
 
-        <input type="checkbox" id="leche" name="leche">
-        <label for="leche">Chocolate con leche</label>
+          <input type="checkbox" id="leche" name="leche">
+          <label for="leche">Chocolate con leche</label>
 
-        <input type="checkbox" id="blanco" name="blanco">
-        <label for="blanco">Chocolate blanco</label>
+          <input type="checkbox" id="blanco" name="blanco">
+          <label for="blanco">Chocolate blanco</label>
+        </div>
 
-        <!-- MENSAJE -->
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje"></textarea>
 
-        <!-- BOTÓN -->
         <button type="submit">Enviar</button>
 
       </form>
