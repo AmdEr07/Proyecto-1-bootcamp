@@ -1,0 +1,283 @@
+/* reinicio general: elimina márgenes y paddings por defecto */
+* {
+  margin: 0; /* quita margen exterior */
+  padding: 0; /* quita espacio interior */
+  box-sizing: border-box; /* incluye borde y padding dentro del tamaño */
+}
+
+/* estilo general de toda la página */
+body {
+  font-family: Arial, sans-serif; /* tipo de letra */
+  background-color: #f5eee6; /* color de fondo nude */
+  color: #3b2416; /* color principal del texto */
+  line-height: 1.5; /* espacio entre líneas */
+}
+
+/* cabecera principal */
+header {
+  background-image: url("images/Imagen HEADER.png"); /* imagen de fondo */
+  background-size: cover; /* hace que la imagen cubra todo el header */
+  background-position: center; /* centra la imagen */
+  background-repeat: no-repeat; /* evita que se repita */
+
+  color: white; /* color del texto dentro del header */
+  text-align: center; /* centra el texto */
+  padding: 60px 20px; /* espacio interior: arriba/abajo y lados */
+  position: relative; /* sirve de referencia para ::before */
+}
+
+/* capa oscura sobre la imagen del header */
+header::before {
+  content: ""; /* crea el pseudo-elemento */
+  position: absolute; /* se coloca libremente dentro del header */
+  top: 0; /* pegado arriba */
+  left: 0; /* pegado a la izquierda */
+  width: 100%; /* ocupa todo el ancho */
+  height: 100%; /* ocupa todo el alto */
+  background: rgba(0, 0, 0, 0.4); /* negro con transparencia */
+  z-index: 1; /* esta capa queda por encima de la imagen */
+}
+
+
+ @font-face {
+            font-family: "Open Sans";
+            src: url("fuentes/arial")
+            
+        }
+
+
+        label {
+            font-family: "arial";
+            font-size: 10px;
+        }
+
+        p {
+            font-family: "arial";
+            font-size: 12px;
+
+        }
+
+        .contenedor{
+            font-family: "italiana", serif;
+            widht:80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .sobre{
+            width: 34px;
+            height: 34px;
+            background-image: url("img/sociales2.png");
+            background-position: left top;
+        }
+        .sobre:hoover{
+            background-position: left -75px; ;
+
+            }
+        h1{
+            font-size: 40px;
+            margin-top: 25px;
+            letter-spacing: 1px;
+
+
+        }
+        
+/* texto del header por encima de la capa oscura */
+header h1,
+header nav {
+  position: relative; /* necesario para aplicar z-index correctamente */
+  z-index: 2; /* coloca el texto por encima de la capa */
+}
+
+/* título principal del header */
+header h1 {
+  margin-bottom: 15px; /* separación con el menú */
+  font-size: 48px; /* tamaño grande */
+}
+
+/* bloque del menú */
+nav {
+  margin-top: 10px; /* separación superior */
+}
+
+/* enlaces del menú */
+nav a {
+  color: white; /* color del texto */
+  margin: 0 12px; /* separación horizontal entre enlaces */
+  text-decoration: none; /* quita el subrayado */
+  font-weight: bold; /* negrita */
+  font-size: 20px; /* tamaño del texto */
+}
+
+/* efecto al pasar el ratón por los enlaces */
+nav a:hover {
+  color: #e4314c; /* cambia el color */
+}
+
+/* contenedor principal del contenido */
+main {
+  width: 90%; /* ocupa el 90% del ancho */
+  max-width: 1100px; /* pero como máximo 1100px */
+  margin: 30px auto; /* centrado horizontal y separación vertical */
+}
+
+/* sección principal destacada */
+.contenido-principal {
+  background-color: #fff8f0; /* fondo claro */
+  text-align: center; /* texto centrado */
+  padding: 50px 20px; /* espacio interior */
+  margin-bottom: 30px; /* separación con la sección siguiente */
+  border-radius: 10px; /* bordes redondeados */
+}
+
+/* título de la sección principal */
+.contenido-principal h2 {
+  font-size: 42px; /* tamaño del título */
+  margin-bottom: 15px; /* separación con el párrafo */
+}
+
+/* sección de contenido normal */
+.contenido {
+  background-color: #fff8f0; /* mismo fondo claro */
+  text-align: center; /* texto centrado */
+  padding: 40px 20px; /* espacio interior */
+  border-radius: 10px; /* bordes redondeados */
+}
+
+/* título dentro de contenido */
+.contenido h2 {
+  font-size: 36px; /* tamaño del subtítulo */
+  margin-bottom: 20px; /* separación con lo siguiente */
+}
+
+/* bloque article dentro de contenido */
+.contenido article {
+  max-width: 800px; /* ancho máximo para que no quede demasiado largo */
+  margin: 0 auto 25px auto; /* centrado y separación inferior */
+  font-size: 28px; /* tamaño del texto */
+}
+
+/* lista dentro de contenido */
+.contenido ul {
+  list-style: none; /* quita los puntos */
+  padding: 0; /* quita padding por defecto */
+  margin-top: 10px; /* separación superior */
+}
+
+/* elementos de la lista */
+.contenido li {
+  font-size: 26px; /* tamaño del texto */
+  margin-bottom: 10px; /* separación entre elementos */
+}
+
+/* pie de página */
+footer {
+  background-color: #4b2e2e; /* marrón oscuro */
+  color: white; /* texto blanco */
+  text-align: center; /* centrado */
+  padding: 18px; /* espacio interior */
+  margin-top: 30px; /* separación con el contenido */
+  font-size: 24px; /* tamaño del texto */
+}
+
+/* ajustes específicos para la página de contacto */
+.contacto main {
+  width: 90%; /* ocupa el 90% */
+  max-width: 900px; /* máximo 900px */
+  margin: 30px auto; /* centrado y separado */
+}
+
+/* caja principal del contenido de contacto */
+.contacto section {
+  background-color: #fff8f0; /* fondo claro */
+  padding: 40px; /* espacio interior */
+  border-radius: 10px; /* bordes redondeados */
+}
+
+/* título de contacto */
+.contacto h2 {
+  text-align: center; /* centrado */
+  font-size: 36px; /* tamaño del título */
+  margin-bottom: 15px; /* separación inferior */
+}
+
+/* párrafos en contacto */
+.contacto p {
+  text-align: center; /* centrado */
+  margin-bottom: 20px; /* separación inferior */
+  font-size: 22px; /* tamaño del texto */
+}
+
+/* formulario */
+.contacto form {
+  max-width: 600px; /* ancho máximo del formulario */
+  margin: 0 auto; /* centrado horizontal */
+}
+
+/* etiquetas del formulario */
+.contacto label {
+  display: block; /* cada label ocupa una línea */
+  margin-top: 15px; /* separación arriba */
+  margin-bottom: 5px; /* separación abajo */
+  font-weight: bold; /* negrita */
+  font-size: 20px; /* tamaño del texto */
+}
+
+/* campos del formulario */
+.contacto input,
+.contacto select,
+.contacto textarea {
+  width: 100%; /* ocupan todo el ancho */
+  padding: 12px; /* espacio interior */
+  margin-bottom: 10px; /* separación inferior */
+  border: 1px solid #c9b8a8; /* borde suave */
+  border-radius: 6px; /* bordes redondeados */
+  font-size: 18px; /* tamaño del texto */
+}
+
+/* área de texto */
+.contacto textarea {
+  min-height: 120px; /* altura mínima */
+  resize: vertical; /* solo se puede agrandar verticalmente */
+}
+
+/* radios y checkboxes */
+.contacto input[type="radio"],
+.contacto input[type="checkbox"] {
+  width: auto; /* no ocupan todo el ancho */
+  margin-right: 6px; /* separación con el texto */
+}
+
+/* labels dentro de las opciones */
+.contacto .opciones label {
+  display: inline; /* se colocan en la misma línea */
+  font-weight: normal; /* texto normal */
+  margin-right: 15px; /* separación entre opciones */
+  font-size: 18px; /* tamaño del texto */
+}
+
+/* botón del formulario */
+.contacto button {
+  background-color: #8C5A3C; /* color de fondo */
+  color: white; /* texto blanco */
+  padding: 12px 20px; /* espacio interior */
+  border: none; /* sin borde */
+  border-radius: 6px; /* bordes redondeados */
+  cursor: pointer; /* cambia el cursor */
+  font-size: 18px; /* tamaño del texto */
+  margin-top: 15px; /* separación superior */
+}
+
+/* efecto hover del botón */
+.contacto button:hover {
+  background-color: #6b3e26; /* color más oscuro */
+}
+
+/* Quitar imagen de fondo SOLO en servicios */
+body.servicios header {
+  background-image: none;
+  background-color: #4b2e2e; /* color bonito de fondo */
+}
+
+body.servicios header::before {
+  display: none;
+}
