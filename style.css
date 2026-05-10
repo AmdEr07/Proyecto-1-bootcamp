@@ -416,3 +416,28 @@ body.servicios header::before {
     width: 100%; /* tarjetas a ancho completo */
   }
 }
+
+/* =========================
+   AJUSTE RADIO Y CHECKBOX CONTACTO
+   ========================= */
+.contacto .opciones {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 15px;
+  flex-wrap: nowrap;
+}
+
+.contacto .opciones input[type="radio"],
+.contacto .opciones input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.contacto .opciones label {
+  display: inline;
+  margin: 0 20px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
